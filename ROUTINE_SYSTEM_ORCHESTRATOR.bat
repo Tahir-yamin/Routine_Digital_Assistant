@@ -5,16 +5,16 @@ cd /d "D:\Routine_Digital_Assistant"
 echo [SYSTEM] Launching Autonomous Sub-Agents...
 
 :: Start Perception Watcher
-start "RDA Perception" /min python Silver_Tier\Scripts\perception_watcher.py
+start "RDA Perception" /min C:\Python313\python.exe Silver_Tier\Scripts\perception_watcher.py
 
 :: Start Reasoning Agent (Digital Intelligence)
-start "RDA Reasoning" /min python Silver_Tier\Scripts\reasoning_agent.py
+start "RDA Reasoning" /min C:\Python313\python.exe Silver_Tier\Scripts\reasoning_agent.py
 
 :: Start Drafting Agent (Outreach/Drafting)
-start "RDA Drafting" /min python Silver_Tier\Scripts\drafting_agent.py
+start "RDA Drafting" /min C:\Python313\python.exe Silver_Tier\Scripts\drafting_agent.py
 
 :: Start Gmail Watcher (External Perception)
-start "RDA Gmail" /min python Silver_Tier\Scripts\gmail_watcher.py
+start "RDA Gmail" /min C:\Python313\python.exe Silver_Tier\Scripts\gmail_watcher.py
 
 echo.
 echo ==============================================
