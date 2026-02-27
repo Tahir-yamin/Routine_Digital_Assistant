@@ -30,22 +30,23 @@ def log_to_memory(details):
 def generate_x_thread(source_content, title):
     """
     Transforms content into a high-performance X thread using the 'X-Viral-Optimizer' pattern.
+    Focus: AI Sovereignty, Open Source, and Nanabanana Tech. (NOT PM field)
     """
     # 1. Pattern Interrupt Hook
-    hook = f"🚀 Most Project Managers are still using 2010 playbooks in a 2026 AI world.\n\nI just automated my entire Planning workflow using a Sovereign AI Employee. \n\nHere’s how the 'PMI Talent Triangle' changes when your 'Technical mastery' is code. 🧵👇"
+    hook = f"💀 'Local-First' is no longer a niche preference. It's a survival strategy.\n\nI just built a relational memory brain (SQLite) for my AI Employee that runs 100% on my local D: drive. \n\nNo cloud. No 429 quota errors. Just Sovereign Intelligence. 🧵👇"
     
-    # 2. Value Points (Extracted from source context)
+    # 2. Value Points
     points = [
-        "1/ Technical Mastery isn't just knowing P6. It's about 'Ways of Working'—integrating MAS (Multi-Agent Systems) into your schedule logic to detect bottlenecks before they happen.",
-        "2/ Power Skills: In an AI-driven environment, your leadership isn't about tracking hours. It's about Emotional Intelligence (EQ) to manage the human-AI interface on-site.",
-        "3/ Business Acumen: Strategic alignment means using real-time financial telemetry (Odoo/SAP integration) to pivot project budgets instantly, not monthly.",
-        "4/ The Result? A shift from a 'Scheduler' to a 'Business Strategist'. AI handles the data; you handle the decisions."
+        "1/ The Problem: Most agents are thin wrappers around APIs. When the server goes down, your 'employee' dies. Local-first means your business logic is permanent.",
+        "2/ Tech Stack: I'm using a Watchdog perception layer + Ollama (llama3.2) + SQLite Corporate Memory. It triages my Gmail and drafts my X posts while I sleep.",
+        "3/ The 'Corporate Memory' database indexes every task I complete, creating a relational graph of project successes and bottlenecks.",
+        "4/ This isn't just automation. It's an architecture for the future of Sovereign Engineering."
     ]
     
     # 3. Engagement CTA
-    cta = "Are you still tracking projects manually, or are you building the machines of the future?\n\nDrop a 'PM-AI' below if you want the blueprint. 🏗️🤖\n\n#ProjectManagement #PMP #AIEmployee #ConstructionTech"
+    cta = "Are you building on rented land (Cloud) or are you building a Sovereign Fortress?\n\nDrop a 'BRAIN' below if you want the SQLite schema I'm using. 🧠🏗️\n\n#AI #SovereignAI #OpenSource #Nanabanana #LocalFirst"
 
-    full_thread = f"# 📝 X THREAD DRAFT: {title}\n**Account Context**: Tahir-Yamin (X/Twitter)\n**Status**: PENDING APPROVAL\n\n---\n\n"
+    full_thread = f"# 📝 X POST DRAFT: Sovereign Memory Brain\n**Account Context**: tahir_yamin_ (X/Twitter)\n**Status**: PENDING APPROVAL\n\n---\n\n"
     full_thread += f"**Tweet 1 (The Hook)**:\n{hook}\n\n"
     for i, p in enumerate(points):
         full_thread += f"**Tweet {i+2}**:\n{p}\n\n"
