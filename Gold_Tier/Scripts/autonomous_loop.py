@@ -68,10 +68,31 @@ def run_ralph_wiggum_cycle():
             with open(plan_path, 'w', encoding='utf-8') as f:
                 f.writelines(updated_lines)
             
-            # If all steps are now [x], move to Done
+            # If all steps are now [x], move to Done and Index in Memory
             if all_done:
                 log_event(f"Strategic Plan Fully Executed: {plan_file}. Moving to Archive.")
-                os.rename(plan_path, os.path.join(DONE_PATH, plan_file))
+                archive_path = os.path.join(DONE_PATH, plan_file)
+                os.rename(plan_path, archive_path)
+                
+                # --- GOLD TIER CORPORATE MEMORY INDEXING ---
+                try:
+                    import sqlite3
+                    DB_PATH = os.path.join(VAULT_PATH, "corporate_memory.db")
+                    conn = sqlite3.connect(DB_PATH)
+                    cursor = conn.cursor()
+                    with open(archive_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                    
+                    cursor.execute('''
+                    INSERT OR IGNORE INTO tasks (file_name, title, status, created_at, plan_content)
+                    VALUES (?, ?, ?, ?, ?)
+                    ''', (plan_file, plan_file.replace("PLAN_", "").replace(".md", ""), "DONE", datetime.now().strftime("%Y-%m-%d"), content))
+                    conn.commit()
+                    conn.close()
+                    log_event(f"Relational Memory Updated for: {plan_file}")
+                except Exception as e:
+                    log_event(f"Memory update failed: {e}")
+                # -------------------------------------------
 
 if __name__ == "__main__":
     log_event("Ralph Wiggum Loop (Gold Tier) Active.")
