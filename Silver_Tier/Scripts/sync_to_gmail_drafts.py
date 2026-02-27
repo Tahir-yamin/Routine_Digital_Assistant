@@ -12,7 +12,7 @@ ACCOUNTS = ["tahiryamin52@gmail.com", "tahiryamin2050@gmail.com", "tahiryamin203
 
 def get_service(email):
     safe_email = email.split('@')[0]
-    token_path = os.path.join(r"D:\Routine_Digital_Assistant", f"token_{safe_email}.json")
+    token_path = os.path.join(r"D:\Routine_Digital_Assistant\Silver_Tier\Scripts", f"token_{safe_email}.json")
     if os.path.exists(token_path):
         creds = Credentials.from_authorized_user_file(token_path, SCOPES)
         return build('gmail', 'v1', credentials=creds)
