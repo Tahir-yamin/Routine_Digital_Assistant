@@ -1,0 +1,45 @@
+# Sensitive Credentials
+Silver_Tier/Scripts/token_*.json
+Silver_Tier/Scripts/credentials.json
+.env
+
+# Logs and Data
+vault/
+*.log
+System_Audit.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Environment
+.venv
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Project Specific
+!Silver_Tier/Docs/
+!Silver_Tier/Briefings/
+
